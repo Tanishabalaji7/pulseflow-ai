@@ -1,0 +1,22 @@
+{
+  "name": "pulseflow-ai-frontend",
+  "version": "1.0.0",
+  "description": "PulseFlow AI Landing Page - SANKAR GROUP Front-End Development Internship Assessment",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -l 3000 .",
+    "serve": "python3 -m http.server 3000"
+  },
+  "keywords": [
+    "frontend",
+    "landing-page",
+    "saas",
+    "responsive-design",
+    "javascript",
+    "css3",
+    "html5"
+  ],
+  "author": "Front-End Developer Candidate",
+  "license": "MIT"
+}
+

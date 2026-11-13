@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PulseFlow AI | Autonomous Engineering Velocity & Workflow Intelligence</title>
+  <meta name="description" content="Turn engineering chaos into unstoppable velocity. PulseFlow automatically uncovers sprint blockers, optimizes PR cycle times, and streamlines engineering workflows.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236366f1' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M13 2L3 14h9l-1 8 10-12h-9l1-8z'/></svg>">
+
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Core & Component Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. NAVIGATION BAR
+       ========================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" aria-label="PulseFlow Home">
+        <div class="brand-icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+          </svg>
+        </div>
+        <span>PulseFlow<span style="color: var(--primary);">.ai</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions (Theme Toggle, Sign In, Primary CTA) -->
+      <div class="nav-actions">
+        <!-- Dark/Light Theme Switcher Button -->
+        <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme mode" title="Toggle theme mode">
+          <!-- Sun icon for light mode -->
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon icon for dark mode -->
+          <svg class="icon-moon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Sign In Link -->
+        <a href="#contact" class="nav-link nav-signin-link" style="margin-right: 4px;">Sign In</a>
+
+        <!-- Sign Up CTA Modal Button -->
+        <button type="button" class="btn btn-primary btn-sm" data-open-modal data-plan="pro">
+          <span>Get Started</span>
+          <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </button>
+
+        <!-- Mobile Drawer Hamburger Toggle Button -->
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu & Overlay -->
+  <div class="mobile-backdrop" id="mobile-backdrop"></div>
+  <aside class="mobile-menu-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-links">
+      <a href="#features" class="mobile-nav-link">Features</a>
+      <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
+      <a href="#pricing" class="mobile-nav-link">Pricing</a>
+      <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+      <a href="#faq" class="mobile-nav-link">FAQ</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <div class="mobile-nav-actions">
+      <button type="button" class="btn btn-primary" style="width: 100%;" data-open-modal data-plan="pro">
+        Get Started Free
+      </button>
+      <a href="#contact" class="btn btn-secondary" style="width: 100%; text-align: center;">
+        Schedule Demo
+      </a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- =========================================================================
+         2. HERO SECTION
+         ========================================================================= -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <!-- Announcement Pill -->
+        <div class="hero-pill">
+          <span class="pulse-indicator"></span>
+          <span><strong>PulseFlow 2.0</strong> is live: Autonomous Sprint Intelligence</span>
+          <span style="color: var(--primary);">Explore &rarr;</span>
+        </div>
+
+        <!-- Headline & Subheadline -->
+        <h1 class="hero-title">
+          Turn Engineering Chaos Into <span class="gradient-text">Unstoppable Velocity</span>
+        </h1>
+        <p class="hero-subtitle">
+          PulseFlow continuously analyzes your GitHub PRs, Jira tickets, and developer signals to automatically resolve sprint bottlenecks, unblock code reviews, and boost team momentum by 40%.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-cta-group">
+          <button type="button" class="btn btn-primary btn-lg" data-open-modal data-plan="pro">
+            <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            <span>Start Free Trial</span>
+          </button>
+          
+          <a href="#contact" class="btn btn-secondary btn-lg">
+            <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polygon points="10 8 16 12 10 16 10 8"/>
+            </svg>
+            <span>Request Demo</span>
+          </a>
+        </div>
+
+        <!-- Microcopy Trust Indicators -->
+        <div class="hero-microcopy">
+          <span>
+            <svg style="width: 14px; height: 14px; color: var(--emerald-accent);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            14-day free trial
+          </span>
+          <span>
+            <svg style="width: 14px; height: 14px; color: var(--emerald-accent);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            No credit card required
+          </span>
+          <span>
+            <svg style="width: 14px; height: 14px; color: var(--emerald-accent);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Connects in 2 minutes
+          </span>
+        </div>
+
+        <!-- HERO DASHBOARD VISUAL ILLUSTRATION (Interactive Mockup) -->
+        <div class="hero-dashboard-preview" aria-label="Interactive Product Dashboard Mockup">
+          <!-- Window Chrome Header -->
+          <div class="window-chrome">
+            <div class="window-dots">
+              <span class="dot-red"></span>
+              <span class="dot-yellow"></span>
+              <span class="dot-green"></span>
+            </div>
+            <div class="window-url-bar">
+              <svg style="width: 12px; height: 12px; color: var(--emerald-accent);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span>app.pulseflow.ai/workspace/sprint-44</span>
+            </div>
+            <span class="badge badge-emerald" style="font-size: 0.7rem; padding: 2px 8px;">Live Telemetry</span>
+          </div>
+
+          <!-- Dashboard Content Inner -->
+          <div class="dashboard-content">
+            <!-- Row of Metrics -->
+            <div class="dash-metrics-row">
+              <div class="dash-metric-card">
+                <div class="dash-metric-header">
+                  <span>Sprint Velocity Score</span>
+                  <span class="badge badge-emerald">+28%</span>
+                </div>
+                <div class="dash-metric-value">
+                  94.2 <small>pts/wk</small>
+                </div>
+                <div class="dash-progress-track">
+                  <div class="dash-progress-bar" style="width: 88%;"></div>
+                </div>
+              </div>
+
+              <div class="dash-metric-card">
+                <div class="dash-metric-header">
+                  <span>Median PR Cycle Time</span>
+                  <span class="badge badge-cyan">-3.8 hrs</span>
+                </div>
+                <div class="dash-metric-value">
+                  1.4 <small>hours</small>
+                </div>
+                <div class="dash-progress-track">
+                  <div class="dash-progress-bar" style="width: 92%; background: linear-gradient(90deg, var(--cyan-accent), var(--emerald-accent));"></div>
+                </div>
+              </div>
+
+              <div class="dash-metric-card">
+                <div class="dash-metric-header">
+                  <span>Developer Flow State</span>
+                  <span class="badge badge-indigo">Optimal</span>
+                </div>
+                <div class="dash-metric-value">
+                  92% <small>unblocked</small>
+                </div>
+                <div class="dash-progress-track">
+                  <div class="dash-progress-bar" style="width: 92%; background: linear-gradient(90deg, var(--secondary), var(--primary));"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Visual Chart & Feed Grid -->
+            <div class="dash-main-grid">
+              <!-- Velocity Trend Chart -->
+              <div class="dash-chart-panel">
+                <div class="dash-panel-title">
+                  <span>Sprint Velocity & Code Throughput</span>
+                  <span style="font-size: 0.75rem; color: var(--text-tertiary);">Last 6 Sprints</span>
+                </div>
+                <div class="mockup-chart-container">
+                  <div class="chart-bar-group">
+                    <div class="chart-bar-track">
+                      <div class="chart-bar-fill" style="height: 48%;"></div>
+                    </div>
+                    <span class="chart-label">S#39</span>
+                  </div>
+                  <div class="chart-bar-group">
+                    <div class="chart-bar-track">
+                      <div class="chart-bar-fill" style="height: 60%;"></div>
+                    </div>
+                    <span class="chart-label">S#40</span>
+                  </div>
+                  <div class="chart-bar-group">
+                    <div class="chart-bar-track">
+                      <div class="chart-bar-fill" style="height: 55%;"></div>
+                    </div>
+                    <span class="chart-label">S#41</span>
+                  </div>
+                  <div class="chart-bar-group">
+                    <div class="chart-bar-track">
+                      <div class="chart-bar-fill" style="height: 72%;"></div>
+                    </div>
+                    <span class="chart-label">S#42</span>
+                  </div>
+                  <div class="chart-bar-group">
+                    <div class="chart-bar-track">
+                      <div class="chart-bar-fill" style="height: 84%;"></div>
+                    </div>
+                    <span class="chart-label">S#43</span>
+                  </div>
+                  <div class="chart-bar-group">
+                    <div class="chart-bar-track">
+                      <div class="chart-bar-fill" style="height: 96%; background: linear-gradient(180deg, var(--cyan-accent) 0%, var(--primary) 100%);"></div>
+                    </div>
+                    <span class="chart-label" style="color: var(--primary); font-weight: 700;">Current</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Live AI Recommendations Feed -->
+              <div class="dash-feed-panel">
+                <div class="dash-panel-title">
+                  <span>AI Autopilot Feed</span>
+                  <span class="pulse-indicator"></span>
+                </div>
+                <div class="feed-list">
+                  <div class="feed-item">
+                    <div class="feed-icon emerald">
+                      <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="feed-text">
+                      <strong>PR #829 Re-routed</strong>
+                      <span>Auto-assigned to Alex (expert in Auth modules)</span>
+                    </div>
+                  </div>
+
+                  <div class="feed-item">
+                    <div class="feed-icon indigo">
+                      <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <div class="feed-text">
+                      <strong>Sprint Slippage Prevented</strong>
+                      <span>Shifted 2 blocker tickets before deadline</span>
+                    </div>
+                  </div>
+
+                  <div class="feed-item">
+                    <div class="feed-icon amber">
+                      <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    </div>
+                    <div class="feed-text">
+                      <strong>Context Switching Alert</strong>
+                      <span>Suggested async digest for 3 engineers</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SOCIAL PROOF LOGOS BANNER
+         ========================================================================= -->
+    <section class="partners-section" aria-label="Companies using PulseFlow">
+      <div class="container">
+        <h2 class="partners-title">Powering fast-shipping engineering teams worldwide</h2>
+        <div class="partners-logos">
+          <div class="partner-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GitHub</span>
+          </div>
+          <div class="partner-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M24 22.525H0l12-21.05 12 21.05z"/></svg>
+            <span>Vercel</span>
+          </div>
+          <div class="partner-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697.5 12.72.5 6.05.5 2.05 3.977 2.05 9.489c0 4.908 4.256 6.551 7.42 7.72 2.766 1.018 3.738 1.745 3.738 2.822 0 .993-.896 1.545-2.39 1.545-2.278 0-5.114-1.077-7.078-2.223L2.8 24.877c1.921 1.042 5.03 1.623 8.356 1.623 6.942 0 11.235-3.328 11.235-9.155 0-5.184-4.225-6.848-8.415-8.195z"/></svg>
+            <span>Stripe</span>
+          </div>
+          <div class="partner-logo-item">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+            <span>Linear</span>
+          </div>
+          <div class="partner-logo-item">
+            <svg viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h5.27c-.23 1.2-1.39 3.51-5.27 3.51-3.17 0-5.76-2.58-5.76-5.76s2.59-5.76 5.76-5.76c1.8 0 3.01.77 3.7 1.43l2.16-2.08C21.94 3.78 18.28 2.5 12.18 2.5 6.94 2.5 2.68 6.76 2.68 12s4.26 9.5 9.5 9.5c5.47 0 9.1-3.84 9.1-9.26 0-.62-.07-1.09-.13-1.14z"/></svg>
+            <span>Supabase</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. FEATURES SECTION (Bento Grid)
+         ========================================================================= -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Powerful Capabilities</div>
+          <h2 class="section-title">Engineered to eliminate friction at every stage</h2>
+          <p class="section-desc">
+            Traditional project management tools are reactive checklists. PulseFlow is proactive intelligence that continuously clears roadblocks for your developers.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature 1 (Spotlight card) -->
+          <article class="feature-card col-span-2">
+            <div class="feature-icon-badge">
+              <svg style="width: 26px; height: 26px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Predictive Sprint Velocity Intelligence</h3>
+            <p class="feature-desc">
+              PulseFlow analyzes commit cadence, complexity trends, and code churn to forecast sprint deliverables with 98% accuracy. Get early alerts 4 days before a deadline slips rather than during the retrospective.
+            </p>
+            <div class="feature-highlight-list">
+              <div class="feature-highlight-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Automated detection of hidden dependency blockers between tickets</span>
+              </div>
+              <div class="feature-highlight-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Monte Carlo completion confidence simulations generated on each commit</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Feature 2 -->
+          <article class="feature-card">
+            <div class="feature-icon-badge">
+              <svg style="width: 26px; height: 26px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="18" cy="18" r="3"/>
+                <circle cx="6" cy="6" r="3"/>
+                <path d="M13 6h3a2 2 0 0 1 2 2v7M6 9v12"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Smart PR Routing & Review Optimization</h3>
+            <p class="feature-desc">
+              Cut review turnaround times by 65%. PulseFlow matches pull requests to the most relevant engineers based on active context and avoids overloading senior leads.
+            </p>
+            <div class="feature-highlight-list">
+              <div class="feature-highlight-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Contextual reviewer matching by git blame & file history</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Feature 3 -->
+          <article class="feature-card">
+            <div class="feature-icon-badge">
+              <svg style="width: 26px; height: 26px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Autonomous Async Standups</h3>
+            <p class="feature-desc">
+              Eliminate daily 30-minute status meetings. PulseFlow aggregates tickets, merged PRs, and blockers into an actionable Slack or Discord digest every morning.
+            </p>
+            <div class="feature-highlight-list">
+              <div class="feature-highlight-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Saves ~3.5 engineer hours per person every week</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Feature 4 -->
+          <article class="feature-card">
+            <div class="feature-icon-badge">
+              <svg style="width: 26px; height: 26px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Burnout & Workload Sentinel</h3>
+            <p class="feature-desc">
+              Maintain healthy engineering culture with non-invasive signals: identify weekend commit spikes, context-switching overload, and outsized review backlogs.
+            </p>
+            <div class="feature-highlight-list">
+              <div class="feature-highlight-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Zero individual surveillance; strictly team health aggregation</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Feature 5 (Enterprise Security) -->
+          <article class="feature-card">
+            <div class="feature-icon-badge">
+              <svg style="width: 26px; height: 26px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">SOC-2 Type II & Zero Code Storage</h3>
+            <p class="feature-desc">
+              Your source code never leaves your perimeter or trains public LLMs. We parse metadata and git diff statistics with end-to-end TLS 1.3 encryption.
+            </p>
+            <div class="feature-highlight-list">
+              <div class="feature-highlight-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>SAML SSO, RBAC & comprehensive audit logs</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. ABOUT / HOW IT WORKS SECTION
+         ========================================================================= -->
+    <section class="section" id="how-it-works" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Seamless Onboarding</div>
+          <h2 class="section-title">How PulseFlow delivers results in 3 steps</h2>
+          <p class="section-desc">
+            Zero configuration files, no new software for developers to install, and instant value within your very first sprint.
+          </p>
+        </div>
+
+        <div class="how-it-works-grid">
+          <!-- Step Switcher Controls -->
+          <div class="steps-list" role="tablist" aria-label="How it works steps">
+            <!-- Step 1 -->
+            <div class="step-card active" data-step="1" role="tab" tabindex="0" aria-selected="true" aria-controls="step-view-1">
+              <div class="step-num">01</div>
+              <div class="step-content">
+                <h3>Connect your Git & Issue Tracker</h3>
+                <p>One-click OAuth integration for GitHub, GitLab, Jira, and Linear. Read-only metadata permissions take less than two minutes to authorize.</p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card" data-step="2" role="tab" tabindex="0" aria-selected="false" aria-controls="step-view-2">
+              <div class="step-num">02</div>
+              <div class="step-content">
+                <h3>PulseFlow Maps Dependencies & Telemetry</h3>
+                <p>Our autonomous intelligence models historical cycle times, reviewer habits, and code dependencies across your entire engineering organization.</p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card" data-step="3" role="tab" tabindex="0" aria-selected="false" aria-controls="step-view-3">
+              <div class="step-num">03</div>
+              <div class="step-content">
+                <h3>Continuous Momentum & Actionable Signals</h3>
+                <p>Review queues clear 3x faster, sprint surprises vanish, and managers receive real-time unblocking suggestions straight in Slack.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step Dynamic Preview Screen -->
+          <div class="step-preview-card" aria-live="polite">
+            <!-- Preview 1 -->
+            <div class="step-view active" data-view="1" id="step-view-1">
+              <div style="margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between;">
+                <span class="badge badge-indigo">Integration Wizard</span>
+                <span style="font-size: 0.75rem; color: var(--emerald-accent);">● Connected & Verified</span>
+              </div>
+              <div class="code-mockup-wrapper">
+                <span class="code-line"><span class="code-comment"># Instant OAuth Handshake via CLI or Webhook</span></span>
+                <span class="code-line"><span class="code-keyword">$</span> pulseflow connect --org=acme-corp</span>
+                <span class="code-line"><span class="code-fn">&gt; Discovering repositories:</span> 34 active services found</span>
+                <span class="code-line"><span class="code-fn">&gt; Syncing Jira projects:</span> [ENG, PROD, SRE]</span>
+                <span class="code-line"><span class="code-success">&check; Handshake complete. Ingesting telemetry pipeline.</span></span>
+              </div>
+            </div>
+
+            <!-- Preview 2 -->
+            <div class="step-view" data-view="2" id="step-view-2">
+              <div style="margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between;">
+                <span class="badge badge-cyan">Signal Mining Engine</span>
+                <span style="font-size: 0.75rem; color: var(--cyan-accent);">● Real-time Analysis</span>
+              </div>
+              <div class="code-mockup-wrapper">
+                <span class="code-line"><span class="code-comment"># Autonomous Graph Construction</span></span>
+                <span class="code-line"><span class="code-keyword">const</span> analysis = <span class="code-fn">await</span> engine.<span class="code-fn">auditSprintHealth</span>({</span>
+                <span class="code-line">&nbsp;&nbsp;activeTickets: <span class="code-string">48</span>,</span>
+                <span class="code-line">&nbsp;&nbsp;detectedBottlenecks: [<span class="code-string">'PR-401'</span>, <span class="code-string">'DB-Migration-Wait'</span>],</span>
+                <span class="code-line">&nbsp;&nbsp;riskFactor: <span class="code-string">'Low (96% on-time confidence)'</span></span>
+                <span class="code-line">});</span>
+              </div>
+            </div>
+
+            <!-- Preview 3 -->
+            <div class="step-view" data-view="3" id="step-view-3">
+              <div style="margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between;">
+                <span class="badge badge-emerald">Velocity Realized</span>
+                <span style="font-size: 0.75rem; color: var(--emerald-accent);">● Automated Acceleration</span>
+              </div>
+              <div class="code-mockup-wrapper">
+                <span class="code-line"><span class="code-comment"># Automated Slack Notification Dispatched</span></span>
+                <span class="code-line"><span class="code-keyword">🔔 @Alex</span>: PR #829 was assigned based on your auth expertise.</span>
+                <span class="code-line"><span class="code-keyword">🚀 Sprint #44</span> velocity projected at 112% target capacity.</span>
+                <span class="code-line"><span class="code-success">&star; Zero blockers remaining for today's release window.</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. PRICING SECTION
+         ========================================================================= -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Transparent Plans</div>
+          <h2 class="section-title">Invest in momentum that pays for itself</h2>
+          <p class="section-desc">
+            Simple, flexible pricing for teams of any size. Save countless engineering hours with an average 18x ROI.
+          </p>
+        </div>
+
+        <!-- Monthly / Annual Toggle Switch -->
+        <div class="pricing-switcher-wrapper">
+          <span class="pricing-switch-label active" id="label-monthly">Monthly Billing</span>
+          <label class="switch" for="billing-toggle">
+            <input type="checkbox" id="billing-toggle" aria-label="Toggle annual billing discount">
+            <span class="slider"></span>
+          </label>
+          <span class="pricing-switch-label" id="label-annual">
+            Annual Billing 
+            <span class="badge badge-emerald" style="margin-left: 6px;">Save 20% + 2 Mo Free</span>
+          </span>
+        </div>
+
+        <!-- Pricing Cards Grid -->
+        <div class="pricing-grid">
+          <!-- Plan 1: Developer / Starter -->
+          <div class="pricing-card">
+            <h3 class="plan-name">Developer Starter</h3>
+            <p class="plan-desc">Essential velocity intelligence for individual developers and open-source contributors.</p>
+            <div class="plan-price-wrapper">
+              <span class="plan-currency">$</span>
+              <span class="plan-price">0</span>
+              <span class="plan-interval">/ forever free</span>
+            </div>
+            <div class="pricing-features-title">What's Included:</div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Up to 3 GitHub Repositories</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Basic PR Review Reminders</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>7-Day Telemetry History</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Community Discord Support</span>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-secondary" style="width: 100%;" data-open-modal data-plan="starter">
+              Start Free Today
+            </button>
+          </div>
+
+          <!-- Plan 2: Pro (Popular) -->
+          <div class="pricing-card popular">
+            <div class="popular-badge">Most Popular</div>
+            <h3 class="plan-name">Growth &amp; Pro</h3>
+            <p class="plan-desc">For fast-moving engineering teams scaling sprint output and minimizing friction.</p>
+            <div class="plan-price-wrapper">
+              <span class="plan-currency">$</span>
+              <span class="plan-price" id="price-pro">29</span>
+              <span class="plan-interval">/ seat / month</span>
+            </div>
+            <div class="pricing-features-title">Everything in Starter, plus:</div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Unlimited Repositories &amp; Teams</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>AI Automated PR Review Routing</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Autonomous Slack/Discord Async Standups</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Burnout &amp; Workload Sentinel Alerts</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Jira, Linear &amp; GitLab Bi-directional Sync</span>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-primary" style="width: 100%;" data-open-modal data-plan="pro">
+              Start 14-Day Pro Trial
+            </button>
+          </div>
+
+          <!-- Plan 3: Enterprise -->
+          <div class="pricing-card">
+            <h3 class="plan-name">Enterprise</h3>
+            <p class="plan-desc">Tailored intelligence, dedicated VPC deployment, and enterprise compliance SLAs.</p>
+            <div class="plan-price-wrapper">
+              <span class="plan-currency">$</span>
+              <span class="plan-price" id="price-enterprise">79</span>
+              <span class="plan-interval">/ seat / month</span>
+            </div>
+            <div class="pricing-features-title">Everything in Pro, plus:</div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Single Sign-On (SAML / Okta / Azure AD)</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Self-hosted or Dedicated VPC Option</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Custom Machine Learning Tuning</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>99.99% Uptime SLA &amp; 24/7 Dedicated Lead</span>
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary" style="width: 100%; text-align: center;">
+              Contact Enterprise Sales
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. TESTIMONIALS SECTION
+         ========================================================================= -->
+    <section class="section" id="testimonials" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">User Stories</div>
+          <h2 class="section-title">Loved by engineering leaders worldwide</h2>
+          <p class="section-desc">
+            Discover how high-output engineering teams ship on schedule with PulseFlow.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="testimonial-quote">
+              "PulseFlow reduced our median pull-request review duration from 18 hours to less than 90 minutes. Our engineers no longer dread code reviews, and our sprint velocity jumped 35% in month one."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar">SL</div>
+              <div class="author-info">
+                <h4>Sarah Lin</h4>
+                <p>VP of Engineering at CloudScale</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="testimonial-quote">
+              "The automated async standups alone saved us 4 hours of weekly status meetings per engineer. PulseFlow is the first developer intelligence tool that doesn't feel like micromanagement."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar">MK</div>
+              <div class="author-info">
+                <h4>Marcus Vance</h4>
+                <p>Staff Engineer at FinFlow Tech</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="testimonial-quote">
+              "Being able to foresee sprint bottlenecks 4 days before release has completely eliminated our late-night deployment scrambles. It feels like having an autonomous technical chief of staff."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar">ER</div>
+              <div class="author-info">
+                <h4>Elena Rostova</h4>
+                <p>Head of Product Delivery at NexusLab</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. FAQ SECTION
+         ========================================================================= -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Frequently Asked Questions</div>
+          <h2 class="section-title">Got questions? We have answers</h2>
+          <p class="section-desc">
+            Everything you need to know about PulseFlow AI security, setup, and features.
+          </p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item active">
+            <button type="button" class="faq-question" aria-expanded="true">
+              <span>Does PulseFlow read or store our proprietary source code?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>No. PulseFlow operates on git metadata, diff statistics, commit frequencies, and issue tracker events. We do not store or retain your source code, and we never use your proprietary IP to train shared machine learning models.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>How long does it take to connect our engineering toolchain?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Setup takes less than two minutes. You authenticate via standard OAuth with your GitHub, GitLab, Jira, or Linear workspace. No agent installations or configuration files required.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Can we try PulseFlow before purchasing?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! Every team receives a full 14-day free trial of our Growth & Pro tier with no credit card required. You can also downgrade to our forever-free Developer Starter plan anytime.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>What chat platforms does PulseFlow integrate with for async digests?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>We offer native integrations with Slack, Discord, and Microsoft Teams. You can configure automated daily digests, instant PR assignment notifications, and sprint alert channels.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Is PulseFlow compliant with enterprise security standards?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. PulseFlow is SOC-2 Type II certified, fully GDPR compliant, and enforces TLS 1.3 encryption in transit with AES-256 at rest. Enterprise tiers also include SAML SSO, RBAC, and dedicated VPC hosting.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. DEMO REQUEST & CONTACT SECTION
+         ========================================================================= -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Left Column: Value Proposition & Contact Details -->
+          <div class="contact-info-panel">
+            <div class="section-tag">Interactive Demo</div>
+            <h2>See your team's velocity potential in 20 minutes</h2>
+            <p>
+              Schedule a personalized walkthrough with an engineering workflow specialist. We'll show you exactly how much time PulseFlow can unlock for your squad.
+            </p>
+
+            <div class="contact-perks-list">
+              <div class="contact-perk">
+                <div class="perk-icon">
+                  <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="perk-text">
+                  <h4>Rapid 2-Hour Response SLA</h4>
+                  <p>Our solutions team replies within 2 business hours.</p>
+                </div>
+              </div>
+
+              <div class="contact-perk">
+                <div class="perk-icon">
+                  <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="perk-text">
+                  <h4>Custom Velocity Audit</h4>
+                  <p>Receive a complimentary PR cycle breakdown tailored to your stack.</p>
+                </div>
+              </div>
+
+              <div class="contact-perk">
+                <div class="perk-icon">
+                  <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="perk-text">
+                  <h4>Direct Engineering Support</h4>
+                  <p>Inquiries: <a href="mailto:contact@pulseflow.ai" style="color: var(--primary); text-decoration: underline;">contact@pulseflow.ai</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Demo Request Form -->
+          <div class="contact-form-card">
+            <form id="demo-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="demo-name" class="form-label">Full Name <span class="req">*</span></label>
+                  <input type="text" id="demo-name" name="name" class="form-input" placeholder="e.g. Alex Chen" data-field-name="Full Name" required>
+                  <div class="form-feedback" id="demo-name-error"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="demo-email" class="form-label">Work Email <span class="req">*</span></label>
+                  <input type="email" id="demo-email" name="email" class="form-input" placeholder="alex@company.com" data-field-name="Work Email" required>
+                  <div class="form-feedback" id="demo-email-error"></div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="demo-company" class="form-label">Company Name <span class="req">*</span></label>
+                  <input type="text" id="demo-company" name="company" class="form-input" placeholder="e.g. Acme Labs" data-field-name="Company Name" required>
+                  <div class="form-feedback" id="demo-company-error"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="demo-team-size" class="form-label">Engineering Team Size <span class="req">*</span></label>
+                  <select id="demo-team-size" name="teamSize" class="form-select" data-field-name="Team Size" required>
+                    <option value="">Select team size...</option>
+                    <option value="1-10">1 - 10 engineers</option>
+                    <option value="11-50">11 - 50 engineers</option>
+                    <option value="51-200">51 - 200 engineers</option>
+                    <option value="200+">200+ engineers (Enterprise)</option>
+                  </select>
+                  <div class="form-feedback" id="demo-team-size-error"></div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="demo-challenge" class="form-label">Primary Challenge</label>
+                <select id="demo-challenge" name="challenge" class="form-select">
+                  <option value="pr-bottlenecks">Slow PR review turnaround times</option>
+                  <option value="sprint-slippages">Unpredictable sprint deadlines</option>
+                  <option value="meeting-overload">Too many status meetings / standups</option>
+                  <option value="burnout-retention">Developer workload balancing</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="demo-message" class="form-label">Additional Notes (Optional)</label>
+                <textarea id="demo-message" name="message" class="form-textarea" placeholder="Tell us about your team's current development toolchain..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                <span>Request Tailored Demo</span>
+                <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </button>
+            </form>
+
+            <!-- Success State Banner (Revealed dynamically after submission) -->
+            <div class="form-success-card" id="demo-success-card">
+              <div class="success-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+              <h3 class="form-success-title">Demo Request Received!</h3>
+              <p class="form-success-desc">
+                Thank you! We've reserved a slot and sent a confirmation invite to <strong id="success-user-email">your email</strong>. An engineering solutions architect will contact you shortly.
+              </p>
+              <button type="button" class="btn btn-secondary btn-sm" id="demo-reset-btn">
+                Book Another Demo or Reset Form
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       9. FOOTER
+       ========================================================================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Summary Column -->
+        <div class="footer-brand">
+          <a href="#" class="brand-logo">
+            <div class="brand-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
+            </div>
+            <span>PulseFlow<span style="color: var(--primary);">.ai</span></span>
+          </a>
+          <p>
+            Autonomous engineering velocity and workflow intelligence platform. Built for engineering teams obsessed with shipping quality code faster.
+          </p>
+          <div class="system-status">
+            <span class="pulse-indicator"></span>
+            <span>All systems 100% operational</span>
+          </div>
+        </div>
+
+        <!-- Column 1: Product -->
+        <div class="footer-column">
+          <h4>Product</h4>
+          <div class="footer-links-list">
+            <a href="#features" class="footer-link">Velocity Engine</a>
+            <a href="#features" class="footer-link">Smart PR Routing</a>
+            <a href="#how-it-works" class="footer-link">Async Standups</a>
+            <a href="#pricing" class="footer-link">Pricing Plans</a>
+            <a href="#pricing" class="footer-link">Enterprise Edition</a>
+          </div>
+        </div>
+
+        <!-- Column 2: Resources -->
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <div class="footer-links-list">
+            <a href="#faq" class="footer-link">Documentation</a>
+            <a href="#faq" class="footer-link">API &amp; Webhooks</a>
+            <a href="#testimonials" class="footer-link">Customer Stories</a>
+            <a href="#how-it-works" class="footer-link">Security &amp; SOC2</a>
+            <a href="#faq" class="footer-link">Product Changelog</a>
+          </div>
+        </div>
+
+        <!-- Column 3: Newsletter & Dispatch -->
+        <div class="footer-column">
+          <h4>Stay Updated</h4>
+          <p style="font-size: 0.8125rem; color: var(--text-tertiary); margin-bottom: 12px;">
+            Join 14,000+ engineers receiving our weekly deep-dive on team velocity and developer experience.
+          </p>
+          <form id="newsletter-form" novalidate style="display: flex; gap: 8px;">
+            <input type="email" id="newsletter-email" placeholder="Your work email" class="form-input" style="padding: 8px 12px; font-size: 0.8125rem;" required>
+            <button type="submit" class="btn btn-primary btn-sm" style="padding: 8px 14px;">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 PulseFlow AI, Inc. Built for the <strong>SANKAR GROUP</strong> Front-End Development Internship Assessment.
+        </div>
+        <div class="social-links">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+            <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+            <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+            <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       10. SIGN UP / GET STARTED MODAL DIALOG
+       ========================================================================= -->
+  <div class="modal-overlay" id="signup-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" id="modal-close" aria-label="Close dialog">
+        <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-header">
+        <div class="brand-icon-wrapper" style="width: 32px; height: 32px; margin-bottom: 12px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3 class="modal-title" id="modal-title">Create your PulseFlow Account</h3>
+        <p class="modal-subtitle">Start your 14-day free trial. No credit card required.</p>
+      </div>
+
+      <form id="modal-signup-form" novalidate>
+        <div class="form-group">
+          <label for="modal-name" class="form-label">Full Name <span class="req">*</span></label>
+          <input type="text" id="modal-name" name="name" class="form-input" placeholder="Jordan Bell" data-field-name="Full Name" required>
+          <div class="form-feedback" id="modal-name-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="modal-email" class="form-label">Work Email <span class="req">*</span></label>
+          <input type="email" id="modal-email" name="email" class="form-input" placeholder="jordan@company.com" data-field-name="Work Email" required>
+          <div class="form-feedback" id="modal-email-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="modal-password" class="form-label">Create Password <span class="req">*</span></label>
+          <input type="password" id="modal-password" name="password" class="form-input" placeholder="At least 8 characters" data-field-name="Password" required>
+          <div class="form-feedback" id="modal-password-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="modal-plan-select" class="form-label">Selected Tier</label>
+          <select id="modal-plan-select" name="plan" class="form-select">
+            <option value="starter">Developer Starter (Free Forever)</option>
+            <option value="pro" selected>Growth &amp; Pro (14-Day Free Trial)</option>
+            <option value="enterprise">Enterprise (Custom SLA)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 8px;">
+          Launch PulseFlow Workspace
+        </button>
+
+        <p style="font-size: 0.75rem; color: var(--text-tertiary); text-align: center; margin-top: 14px;">
+          By clicking Launch, you agree to the Terms of Service and Privacy Policy.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       11. FLOATING TOAST NOTIFICATION CONTAINER
+       ========================================================================= -->
+  <div class="toast-container" id="toast-container" aria-live="assertive"></div>
+
+  <!-- JavaScript Application Script -->
+  <script defer src="js/app.js"></script>
+</body>
+</html>
